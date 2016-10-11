@@ -92,9 +92,7 @@ def metatable(meta):
     f = fr.read()
     fr.close()
     f = f + '\n' + newrow
-    fw = open('metadata.tsv', 'w') 
-    fw.write(f) 
-    fw.close()
+    writefile('metadata.tsv', f) 
 
 def createfiles(text, pageUrl, i):
     meta = createmeta(text, pageUrl)
