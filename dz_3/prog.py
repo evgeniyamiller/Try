@@ -24,7 +24,6 @@ def get_text(text):
     for el in result:
         newtext += el + ' '
     newtext = textwork(newtext)
-    print(newtext)
     return create_set(newtext)
 
 def create_set(text):
