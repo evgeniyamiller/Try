@@ -1,0 +1,20 @@
+body {font-size: 14px; font-family: Candara;
+  background-color: rgb(244,248,236); background: url("twi.jpg") repeat; text-align:  center; }
+
+a {color:#f9a7db; font: font-size:20px}
+h1 {font: italic 300%; background: white;}
+h2 {color: #f9a7db; font-size:20px}
+
+
+input {background-color: #ffffff}
+
+table {
+  border-collapse: collapse;
+  background: white;
+  width: 100%;
+  table-layout:fixed
+}
+th, td {border: 1px solid #eab6d0}
+tr:hover td{
+  background: #ffeaf7;
+}
