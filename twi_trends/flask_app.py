@@ -43,7 +43,7 @@ def table_data(data, words):
     days = data[0].keys()
     labels = ['days'] + words
     arr.append(labels)
-    for day in days:
+    for day in sorted(days):
         arr.append([day] + [el[day] for el in data])
     return arr
 
