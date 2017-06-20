@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Results</title>
-	<link rel="stylesheet" type="text/css" href="static/style.css">
+	<style>
+		body{
+		background-color: #87CEEB; 
+		font-family: Candara;
+		text-align:  center; 
+		} 
+	</style>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-        var data = google.visualization.arrayToDataTable({{res}});
+        var data = google.visualization.arrayToDataTable({{res | safe}});
 
         var options = {
           title: '{{word}} в Твиттере',
@@ -26,7 +32,6 @@
 <body>
 <h1>Twitter trends</h1>
 <h2>Results</h2>
-<p>слово: {{word}}</p><br>
 <div id="curve_chart" style="width: 900px; height: 500px"></div>
 <a href="/">Новый поиск</a>
 </body>
