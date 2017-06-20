@@ -45,11 +45,7 @@ def table_data(data, words):
     arr.append(labels)
     for day in days:
         arr.append([day] + [el[day] for el in data])
-    string = '[\n'
-    for el in arr:
-        string += el + '\n'
-    string += ']'
-    return(string)
+    return arr
 
 app = Flask(__name__)
 
@@ -57,7 +53,7 @@ app = Flask(__name__)
 def form():
     if request.args:
         word = request.args['word']
-        res = twi_search(word)#, ensure_ascii=False
+        res = json.dumps(twi_search(word), ensure_ascii=False)
         return render_template('chart.html', word=word, res=res)
     else:
         return render_template('form.html')
